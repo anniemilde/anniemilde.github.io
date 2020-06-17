@@ -1,0 +1,173 @@
+/* lägg egen css här */
+html {
+    font-size: 105%;
+}
+
+#container {
+    width: 85%;
+    margin: 0 auto;
+    background-color:#027368e1;
+   
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2rem;
+    color: #232623;
+    background-image:url('https://images.unsplash.com/photo-1501571190884-100604650072?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ') ;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+
+    background-color:#027368bb;
+}
+
+header {
+    background-color: #A67A53;
+    padding: 1rem;
+    grid-area: header;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight:bold ;
+    padding: 1rem 0.5rem 0.5rem 0.5rem; 
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight:bold ;
+    padding: 0.2rem 0.5rem; 
+}
+
+nav{padding: 1rem;
+grid-area: nav;}
+
+nav ul {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between; 
+    justify-content: center;
+}
+
+nav ul li{
+    width: 10%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #232623;
+}
+
+nav a:hover, nav a:focus{
+    color: #A67A53;
+    outline: none;
+}
+
+aside{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color:#A67A53;
+    grid-area: aside;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+td, th {
+    border: 0.2rem solid #A67A53;;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    background-color: #A67A53;
+    grid-area: footer;
+}
+
+main{
+    padding: 1rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 40px;
+    grid-template-areas: 
+    "story products products"
+    "classes products products "   
+}
+
+#products{grid-area: products;}
+#classes{grid-area: classes;}
+
+main article img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+#story{
+    grid-area: story;
+    font-size: smaller;
+    text-align: justify;
+}
+
+#story img {height: 15%;
+    width: 100%;
+    overflow: hidden;}
+
+@media(max-width: 480px){
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-content: space-between;
+    justify-content: space-around;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "aside aside aside"
+    "footer footer footer";
+}
+}
+
+@media(min-width: 481px){
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        align-content: space-between;
+        justify-content: space-around;
+        grid-template-areas: 
+        "header header header header header"
+        "nav nav nav nav nav"
+        "main main main main aside"
+        "main main main main aside"
+        "footer footer footer footer footer ";
+    }
+    }
+
+  
+  
+  
+
+
+
